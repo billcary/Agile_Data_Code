@@ -80,8 +80,8 @@ class GmailSlurper(object):
     def timeout_handler(signum, frame):
       raise self.TimeoutException()
     
-    signal.signal(signal.SIGALRM, timeout_handler) 
-    signal.alarm(30) # triger alarm in 30 seconds
+    #signal.signal(signal.SIGALRM, timeout_handler) 
+    #signal.alarm(30) # triger alarm in 30 seconds
     
     avro_record = dict()
     status = 'FAIL'
